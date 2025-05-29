@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: laravel-app
-        image: oforsolid/laravelcicd3:v26
+        image: oforsolid/laravelcicd3:v27
         ports:
         - containerPort: 80
         env:
