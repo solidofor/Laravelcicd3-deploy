@@ -37,6 +37,14 @@ spec:
             secretKeyRef:
               name: mysql-secrets
               key: MYSQL_PASSWORD
+        volumeMounts:
+        - name: env-volume
+          mountPath: /var/www/html/.env
+          subPath: .env
+      volumes:
+      - name: env-volume
+        secret:
+          secretName: laravel-env
 ---
 apiVersion: v1
 kind: Service
