@@ -45,6 +45,9 @@ spec:
       - name: env-volume
         secret:
           secretName: laravel-env
+          items:
+            - key: .env
+              path: .env
 ---
 apiVersion: v1
 kind: Service
